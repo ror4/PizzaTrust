@@ -1,0 +1,19 @@
+#{extends 'mainBackOffice.html' /}
+#{set title:'Gestion Tailles/Prix' /}
+
+<a href="/backoffice">Retour vers accueil backoffice</a>
+
+<br/>
+<form method="post" action="/backoffice/addTaille">
+    Ajouter une taille : <input type="text" name="taille.taille"/> <br/>
+    Prix : <input type="text" name="taille.prix"/><br/><input type="submit" value="Ajouter"/> <br/>
+</form>
+<br/>
+Liste des types de sauces:<br/>
+<ul>
+    #{list items:tailles, as:'taille'}
+
+    <li>${taille.taille} : ${taille.prix} €</li>
+
+    #{/list}
+</ul>

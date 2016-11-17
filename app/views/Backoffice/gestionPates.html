@@ -1,0 +1,17 @@
+#{extends 'mainBackOffice.html' /}
+#{set title:'Gestion Pates' /}
+
+<a href="/backoffice">Retour vers accueil backoffice</a>
+<br/>
+<form method="post" action="/backoffice/addPate">
+Créer un type de pates : <input type="text" name="pate.typeDePate"/>&nbsp;<input type="submit" value="Ajouter"/> <br/>
+</form>
+<br/>
+Liste des types de pâtes:<br/>
+<ul>
+#{list items:pates, as:'pate'}
+
+<li>${pate.typeDePate}</li>
+
+#{/list}
+</ul>

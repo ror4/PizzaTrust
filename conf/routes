@@ -5,6 +5,19 @@
 # Home page
 GET     /                                       Application.index
 
+
+#Backoffice
+GET /backoffice                                 Backoffice.AdminController.accueil
+GET /backoffice/gestionPates                    Backoffice.AdminController.gestionPates
+GET /backoffice/gestionTailles                  Backoffice.AdminController.gestionTailles
+GET /backoffice/gestionSauces                   Backoffice.AdminController.gestionSauces
+GET /backoffice/gestionGarnitures               Backoffice.AdminController.gestionGarnitures
+POST /backoffice/addPate                        Backoffice.AdminController.addPate
+POST /backoffice/addSauce                       Backoffice.AdminController.addSauce
+POST /backoffice/addTaille                      Backoffice.AdminController.addTaille
+POST /backoffice/addGarniture                   Backoffice.AdminController.addGarniture
+
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

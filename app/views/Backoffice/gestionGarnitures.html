@@ -1,0 +1,18 @@
+#{extends 'mainBackOffice.html' /}
+#{set title:'Gestion Garnitures' /}
+
+<a href="/backoffice">Retour vers accueil backoffice</a>
+
+<br/>
+<form method="post" action="/backoffice/addGarniture">
+    Créer une garniture : <input type="text" name="garniture.garniture"/>&nbsp;<input type="submit" value="Ajouter"/> <br/>
+</form>
+<br/>
+Liste des garnitures:<br/>
+<ul>
+    #{list items:garnitures, as:'garniture'}
+
+    <li>${garniture.garniture}</li>
+
+    #{/list}
+</ul>

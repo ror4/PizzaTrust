@@ -1,0 +1,17 @@
+#{extends 'mainBackOffice.html' /}
+#{set title:'Gestion Sauces' /}
+
+<a href="/backoffice">Retour vers accueil backoffice</a>
+<br/>
+<form method="post" action="/backoffice/addSauce">
+    Créer une Sauce : <input type="text" name="sauce.nom"/>&nbsp;<input type="submit" value="Ajouter"/> <br/>
+</form>
+<br/>
+Liste des types de sauces:<br/>
+<ul>
+    #{list items:sauces, as:'sauce'}
+
+    <li>${sauce.nom} <a href="/delete"></a></li>
+
+    #{/list}
+</ul>

@@ -17,7 +17,12 @@ public class BackofficeServices extends CommonServices {
     }
 
     public static void addPate(Pates pate){
+        pate.estDisponible = true;
         pate.save();
+    }
+
+    public static void deletePate(Long id){
+        Pates.findById(id)._delete();
     }
 
     public static void updateSauce(Sauces sauce){
@@ -28,6 +33,10 @@ public class BackofficeServices extends CommonServices {
         sauce.save();
     }
 
+    public static void deleteSauce(long id){
+        ((Sauces)Sauces.findById(id)).delete();
+    }
+
     public static void updateTaillePrix(Tailles taille){
         taille.save();
     }
@@ -36,11 +45,16 @@ public class BackofficeServices extends CommonServices {
         taille.save();
     }
 
+    public static void deleteTaillePrix(Tailles taille){
+        taille.delete();
+    }
+
     public static void updateGarniture(Garnitures garniture){
         garniture.save();
     }
 
     public static void addGarniture(Garnitures garniture){
+        garniture.estDisponible = true;
         garniture.save();
     }
 }
