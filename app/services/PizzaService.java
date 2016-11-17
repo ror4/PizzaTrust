@@ -1,5 +1,6 @@
 package services;
 
+import models.Garnitures;
 import models.Pates;
 import models.Tailles;
 
@@ -27,5 +28,14 @@ public class PizzaService {
             tailles.add(taillesPrix.get(i).taille);
         }
         return tailles;
+    }
+
+    public static List<String> getAllGarnitures(){
+        List<Garnitures> garnituresDispo = CommonServices.getListGarnitures();
+        List<String> garnitures = new ArrayList<String>();
+        for (int i=0; i<garnituresDispo.size(); ++i) {
+            garnitures.add(garnituresDispo.get(i).garniture);
+        }
+        return garnitures;
     }
 }

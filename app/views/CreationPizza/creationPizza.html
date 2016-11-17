@@ -20,5 +20,23 @@
 
     <br/><br/>
 
-    <input type="submit" value="Ok">
+    Choix des garnitures (entre 3 et 5) :<br>
+    #{list items:garnitures, as:'i'}
+    <input id="nbreGarn" name="garn[]" type="checkbox" value="${i}">${i}</input>
+    #{/list}
+
+    <br/><br/>
+
+    <input id="Button" type="submit" value="Ok">
 </form>
+
+<!--<td>
+    <input type="text" id="txtID" maxlength="16" />
+</td>
+<td>
+    <input type="button" value="Search" id="btnSearch" disabled="disabled"/>
+</td>-->
+
+#{set 'moreScripts'}
+#{script 'jquery'/}
+#{/set}

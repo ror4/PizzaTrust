@@ -1,0 +1,9 @@
+$("#txtID").bind("propertychange keypress input paste", function (e) {
+    var mid = $.trim(this.value);
+
+    if (mid.length < 6) {
+        $("#btnSearch").attr("disabled", true);
+    }else {
+        $("#btnSearch").removeAttr("disabled");
+    }
+});

@@ -17,6 +17,7 @@ public class PizzaController extends Controller {
     public static void creer(){
         List<String> typedePates = PizzaService.getAllTypedePates();
         List<String> tailles = PizzaService.getAllTaille();
-        renderTemplate("/CreationPizza/creationPizza.html",typedePates,tailles);
+        List<String> garnitures = PizzaService.getAllGarnitures();
+        renderTemplate("/CreationPizza/creationPizza.html",typedePates,tailles,garnitures);
     }
 }
