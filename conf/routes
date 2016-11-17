@@ -18,6 +18,10 @@ POST /backoffice/addTaille                      Backoffice.AdminController.addTa
 POST /backoffice/addGarniture                   Backoffice.AdminController.addGarniture
 
 
+#Frontoffice
+GET     /creationPizza                          PizzaController.creer
+POST    /renseignerDonnees                      ClientController.entrerDonnees
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
