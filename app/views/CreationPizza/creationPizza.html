@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:'Création Pizza' /}
+
+<form action="@{ClientController.entrerDonnees}" method="post">
+    Choix de la pâte :<br>
+    <select name="pate">
+        #{list items:typedePates, as:'pate'}
+        <option value="${pate}">${pate}</option>
+        #{/list}
+    </select>
+
+    <br/><br/>
+
+    Choix de la taille :<br>
+    <select name="taille">
+        <option value="normal">Normale</option>
+        <option value="large">Large</option>
+    </select>
+
+    <br/><br/>
+
+    <input type="submit" value="Ok">
+</form>

@@ -5,6 +5,10 @@
 # Home page
 GET     /                                       Application.index
 
+#Frontoffice
+GET     /creationPizza                          PizzaController.creer
+POST    /renseignerDonnees                      ClientController.entrerDonnees
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
