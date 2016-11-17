@@ -13,8 +13,9 @@
 
     Choix de la taille :<br>
     <select name="taille">
-        <option value="normal">Normale</option>
-        <option value="large">Large</option>
+        #{list items:tailles, as:'taille'}
+        <option value="${taille}">${taille}</option>
+        #{/list}
     </select>
 
     <br/><br/>
