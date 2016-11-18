@@ -3,7 +3,7 @@
 
 <form action="@{ClientController.entrerDonnees}" method="post">
     Choix de la pâte :<br>
-    <select name="commande.pate">
+    <select name="commande1.pate">
         #{list items:typedePates, as:'pate'}
         <option value="${pate}">${pate}</option>
         #{/list}
@@ -12,7 +12,7 @@
     <br/><br/>
 
     Choix de la taille :<br>
-    <select name="commande.taille">
+    <select name="commande1.taille">
         #{list items:tailles, as:'taille'}
         <option value="${taille}">${taille}</option>
         #{/list}
