@@ -16,8 +16,8 @@ public class ClientController extends Controller {
         renderTemplate("/DonnéesClient/formulaireClient.html");
     }
 
-    public static void valider(Commandes commande){
+    public static void valider(){
 //        commande.save();
-//        renderTemplate("/Recapitulatif/recapitulatif.html",commande);
+        renderTemplate("/Recapitulatif/recapitulatif.html");
     }
 }
