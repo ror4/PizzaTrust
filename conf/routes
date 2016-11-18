@@ -21,6 +21,7 @@ POST /backoffice/addGarniture                   Backoffice.AdminController.addGa
 #Frontoffice
 GET     /creationPizza                          PizzaController.creer
 POST    /renseignerDonnees                      ClientController.entrerDonnees
+POST    /recapitulatif                          ClientController.valider
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
