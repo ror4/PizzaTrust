@@ -3,7 +3,6 @@ package services;
 import models.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by Formation on 17/11/2016.
@@ -20,7 +19,7 @@ public class BackofficeServices extends CommonServices {
     }
 
     public static void deletePate(Long id){
-        Pates.findById(id)._delete();
+        ((Pates)Pates.findById(id)).delete();
     }
 
     public static void updateSauce(Sauces sauce){
@@ -43,8 +42,8 @@ public class BackofficeServices extends CommonServices {
         taille.save();
     }
 
-    public static void deleteTaillePrix(Tailles taille){
-        taille.delete();
+    public static void deleteTaillePrix(long id){
+        ((Tailles)Tailles.findById(id)).delete();
     }
 
     public static void updateGarniture(Garnitures garniture){
@@ -59,5 +58,9 @@ public class BackofficeServices extends CommonServices {
     public static List<Commandes> getListCommandes() {
         List<Commandes> commandes = Commandes.find("ORDER BY dateCommande").fetch();
         return commandes;
+    }
+
+    public static void deleteGarniture(long id) {
+        ((Garnitures)Garnitures.findById(id)).delete();
     }
 }

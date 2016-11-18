@@ -4,7 +4,7 @@
 <a href="/backoffice">Retour vers accueil backoffice</a>
 
 <br/>
-<form method="post" action="/backoffice/addTaille">
+<form method="post" action="/backoffice/addTaillePrix">
     Ajouter une taille : <input type="text" name="taille.taille"/> <br/>
     Prix : <input type="text" name="taille.prix"/><br/><input type="submit" value="Ajouter"/> <br/>
 </form>
@@ -13,7 +13,7 @@ Liste des types de sauces:<br/>
 <ul>
     #{list items:tailles, as:'taille'}
 
-    <li>${taille.taille} : ${taille.prix} €</li>
+    <li>${taille.taille} : ${taille.prix} € <a href="/deleteTaille?id=${taille.id}">X</a></li>
 
     #{/list}
 </ul>

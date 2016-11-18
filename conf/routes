@@ -14,9 +14,13 @@ GET /backoffice/gestionSauces                   Backoffice.AdminController.gesti
 GET /backoffice/gestionGarnitures               Backoffice.AdminController.gestionGarnitures
 POST /backoffice/addPate                        Backoffice.AdminController.addPate
 POST /backoffice/addSauce                       Backoffice.AdminController.addSauce
-POST /backoffice/addTaille                      Backoffice.AdminController.addTaille
+POST /backoffice/addTaillePrix                  Backoffice.AdminController.addTaillePrix
 POST /backoffice/addGarniture                   Backoffice.AdminController.addGarniture
 GET /backoffice/historiqueCommande              Backoffice.AdminController.gestionCommandes
+GET /deleteSauce                                Backoffice.AdminController.deleteSauce(id:long)
+GET /deleteTaille                               Backoffice.AdminController.deleteTaille(id:long)
+GET /deleteGarniture                            Backoffice.AdminController.deleteGarniture(id:long)
+GET /deletePate                                 Backoffice.AdminController.deletePate(id:long)
 
 
 #Frontoffice
