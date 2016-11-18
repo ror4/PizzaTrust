@@ -22,6 +22,7 @@ GET /backoffice/historiqueCommande              Backoffice.AdminController.gesti
 #Frontoffice
 GET     /creationPizza                          PizzaController.creer
 POST    /renseignerDonnees                      ClientController.entrerDonnees
+POST    /recapitulatif                          ClientController.valider
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
