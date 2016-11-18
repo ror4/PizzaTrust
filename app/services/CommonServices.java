@@ -25,6 +25,10 @@ public class CommonServices {
     }
 
     public static List<Garnitures> getListGarnitures(){
-        return Garnitures.findAll();
+        List<Garnitures> gs = Garnitures.findAll();
+        for (Garnitures garniture:gs) {
+            garniture.garniture = garniture.garniture.toLowerCase();
+        }
+        return gs;
     }
 }
