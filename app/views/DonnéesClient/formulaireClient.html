@@ -1,10 +1,36 @@
 #{extends 'main.html' /}
 #{set title:'Formulaire Client' /}
 
-Pâte : ${pate} <br/>
-Taille : ${taille} <br/>
-Garniture :
-#{list items:0..garn.size()-2, as:'i'}
-${garn.get(i)},
-#{/list}
-${garn.get(garn.size()-1)}
+<form id=paiement action="@{ClientController.valider}" method="post">
+    <fieldset>
+        <legend>Votre identité</legend>
+
+        <ul>
+            <li>
+                <label>Nom</label>
+                <input id=nom name=commande.nom type=text placeholder="Prénom et nom" required autofocus>
+            </li>
+            <li>
+                <label>Téléphone</label>
+                <input id=telephone name=commande.telephone type=tel placeholder="par ex&nbsp;: 0600000000" required>
+            </li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Adresse de livraison</legend>
+        <ul>
+            <li>
+                <label>Adresse</label>
+                <input id=adresse name=commande.adresse rows=1 placeholder="11, rue Alfred Kastler" required>
+            </li>
+            <li>
+                <label>Code postal</label>
+                <input id=codepostal name=commande.codePostal type=text placeholder="14280" required>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <button type=submit>Valider !</button>
+    </fieldset>
+</form>

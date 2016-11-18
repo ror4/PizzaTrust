@@ -1,9 +1,9 @@
 #{extends 'main.html' /}
 #{set title:'Création Pizza' /}
-
+<div class="creation">
 <form action="@{ClientController.entrerDonnees}" method="post">
     Choix de la pâte :<br>
-    <select name="pate">
+    <select name="commande1.pate">
         #{list items:typedePates, as:'pate'}
         <option value="${pate}">${pate}</option>
         #{/list}
@@ -12,7 +12,7 @@
     <br/><br/>
 
     Choix de la taille :<br>
-    <select name="taille">
+    <select name="commande1.taille">
         #{list items:tailles, as:'taille'}
         <option value="${taille}">${taille}</option>
         #{/list}
@@ -21,21 +21,15 @@
     <br/><br/>
 
     Choix des garnitures (entre 3 et 5) :<br>
-    #{list items:garnitures, as:'i'}
-    <input id="nbreGarn" name="garn[]" type="checkbox" value="${i}">${i}</input>
+    #{list items:garnitures, as:'ingredient'}
+    <input id="nbreGarn" name="garn[]" type="checkbox" value="${ingredient}"> <img src="/public/images/${ingredient}.png">
     #{/list}
 
     <br/><br/>
 
     <input id="Button" type="submit" value="Ok">
 </form>
-
-<!--<td>
-    <input type="text" id="txtID" maxlength="16" />
-</td>
-<td>
-    <input type="button" value="Search" id="btnSearch" disabled="disabled"/>
-</td>-->
+</div>
 
 #{set 'moreScripts'}
 #{script 'jquery'/}

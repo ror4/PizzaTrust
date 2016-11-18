@@ -11,6 +11,8 @@ import java.sql.Date;
 @Entity
 public class Commandes extends Model{
 
+    //Etat de la commande
+    public String etat;
     //infos client
     public String nom;
     public String adresse;
