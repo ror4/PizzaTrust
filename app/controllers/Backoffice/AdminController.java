@@ -59,6 +59,6 @@ public class AdminController extends Controller {
     }
 
     public static void deleteSauce(long id){
-        BackofficeServices.deleteSauce();
+        BackofficeServices.deleteSauce(id);
     }
 }
