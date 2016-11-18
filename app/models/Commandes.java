@@ -3,6 +3,7 @@ package models;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
+import java.sql.Date;
 
 /**
  * Created by Formation on 17/11/2016.
@@ -18,7 +19,7 @@ public class Commandes extends Model{
     public String telephone;
     //infos pizza
     public String taille;
-    public String pates;
+    public String pate;
     public String sauce;
     public String garniture1;
     public String garniture2;
@@ -26,6 +27,8 @@ public class Commandes extends Model{
     public String garniture4;
     public String garniture5;
     //infos prix
-    public int prix;
+    public float total;
+    public Date dateCommande;
+
 
 }
