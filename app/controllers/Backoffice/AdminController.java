@@ -62,5 +62,21 @@ public class AdminController extends Controller {
 
     public static void deleteSauce(long id){
         BackofficeServices.deleteSauce(id);
+        gestionSauces();
+    }
+
+    public static void deletePate(long id){
+        BackofficeServices.deletePate(id);
+        gestionPates();
+    }
+
+    public static void deleteGarniture(long id){
+        BackofficeServices.deleteGarniture(id);
+        gestionGarnitures();
+    }
+
+    public static void deleteTaille(long id){
+        BackofficeServices.deleteTaillePrix(id);
+        gestionTailles();
     }
 }

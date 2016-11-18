@@ -12,7 +12,7 @@ Liste des garnitures:<br/>
 <ul>
     #{list items:garnitures, as:'garniture'}
 
-    <li>${garniture.garniture}</li>
+    <li>${garniture.garniture} <a href="/deleteGarniture?id=${garniture.id}">X</a> </li>
 
     #{/list}
 </ul>

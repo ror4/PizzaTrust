@@ -12,12 +12,12 @@ import java.util.List;
 public class ClientController extends Controller {
 
     public static void entrerDonnees(Commandes commande1, List<String> garn){
-        Commandes commande = PizzaService.enregistrer(commande1,garn);
-        renderTemplate("/DonnéesClient/formulaireClient.html");
+        Long idCommande =PizzaService.enregistrer(commande1,garn);
+        renderTemplate("/DonnéesClient/formulaireClient.html",idCommande);
     }
 
-    public static void valider(){
-//        commande.save();
-        renderTemplate("/Recapitulatif/recapitulatif.html");
+    public static void valider(Long idCommande,String nom, String telephone, String adresse, String codePostal){
+        Commandes commande = PizzaService.completer((Commandes)Commandes.findById(idCommande),nom,telephone,adresse,codePostal);
+        renderTemplate("/Recapitulatif/recapitulatif.html",commande);
     }
 }
