@@ -20,4 +20,9 @@ public class ClientController extends Controller {
         Commandes commande = PizzaService.completer((Commandes)Commandes.findById(idCommande),nom,telephone,adresse,codePostal);
         renderTemplate("/Recapitulatif/recapitulatif.html",commande);
     }
+
+    public static void finir(Long idCommande){
+        PizzaService.finir((Commandes)Commandes.findById(idCommande));
+        renderTemplate("/Recapitulatif/merci.html");
+    }
 }

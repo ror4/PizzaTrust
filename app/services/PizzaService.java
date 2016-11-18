@@ -73,4 +73,9 @@ public class PizzaService {
         commande.save();
         return commande;
     }
+
+    public static void finir(Commandes commande){
+        commande.etat="commande validée";
+        commande.save();
+    }
 }

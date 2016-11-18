@@ -4,18 +4,24 @@
 <div class="recapitulatif">
     <h1>Recapitulatif de votre commande</h1>
     <p>
-        Nom : <b>Toto</b><br/><br/>
+        Nom : <b>${commande.nom}</b><br/><br/>
         Adresse :<br/>
-        <b>1 rue de la formation<br/>
-        14000 Caen</b><br/><br/>
-        Téléphone : <b>0233343536</b><br/><br/>
-        Pizza de taille <b>large</b> à pâte <b>fine</b><br/><br/>
+        <b>${commande.adresse}<br/>
+        ${commande.codePostal}</b><br/><br/>
+        Téléphone : <b>${commande.telephone}</b><br/><br/>
+        Pizza de taille <b>${commande.taille}</b> à pâte <b>${commande.pate}</b><br/><br/>
         Garnitures :<br/>
-        <b>jambon</b><br/>
-        <b>bacon</b><br/>
-        <b>champignon</b><br/>
-        <b>chèvre</b><br/>
-        <b>merguez</b><br/><br/>
-        Prix : <b>7</b> €
+        <b>${commande.garniture1}</b><br/>
+        <b>${commande.garniture2}</b><br/>
+        <b>${commande.garniture3}</b><br/>
+        <b>${commande.garniture4}</b><br/>
+        <b>${commande.garniture5}</b><br/><br/>
+        Prix : <b>${commande.total}</b> €
     </p>
 </div>
+
+
+<form action="@{ClientController.finir}" method="post">
+    <input type="hidden" name="idCommande" value=${commande.id}>
+    <input type="submit" value="Valider">
+</form>
