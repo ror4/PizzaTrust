@@ -3,7 +3,7 @@
 
 <form action="@{ClientController.entrerDonnees}" method="post">
     Choix de la pâte :<br>
-    <select name="pate">
+    <select name="commande.pate">
         #{list items:typedePates, as:'pate'}
         <option value="${pate}">${pate}</option>
         #{/list}
@@ -12,7 +12,7 @@
     <br/><br/>
 
     Choix de la taille :<br>
-    <select name="taille">
+    <select name="commande.taille">
         #{list items:tailles, as:'taille'}
         <option value="${taille}">${taille}</option>
         #{/list}
@@ -22,20 +22,13 @@
 
     Choix des garnitures (entre 3 et 5) :<br>
     #{list items:garnitures, as:'i'}
-    <input id="nbreGarn" name="garn[]" type="checkbox" value="${i}">${i}</input>
+    <input id="nbreGarn" name="garn" type="checkbox" value="${i}">${i}</input>
     #{/list}
 
     <br/><br/>
 
     <input id="Button" type="submit" value="Ok">
 </form>
-
-<!--<td>
-    <input type="text" id="txtID" maxlength="16" />
-</td>
-<td>
-    <input type="button" value="Search" id="btnSearch" disabled="disabled"/>
-</td>-->
 
 #{set 'moreScripts'}
 #{script 'jquery'/}
