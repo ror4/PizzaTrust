@@ -17,7 +17,7 @@ public class ClientController extends Controller {
     }
 
     public static void valider(Commandes commande){
-        commande.save();
+//        commande.save();
 //        renderTemplate("/Recapitulatif/recapitulatif.html",commande);
     }
 }
