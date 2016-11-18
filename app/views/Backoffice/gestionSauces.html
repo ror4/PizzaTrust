@@ -11,7 +11,7 @@ Liste des types de sauces:<br/>
 <ul>
     #{list items:sauces, as:'sauce'}
 
-    <li>${sauce.nom} <a href="/delete"></a></li>
+    <li>${sauce.nom} <a href="/deleteSauce?id=${sauce.id}">X</a></li>
 
     #{/list}
 </ul>
