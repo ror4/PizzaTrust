@@ -41,7 +41,7 @@ public class PizzaService {
         return garnitures;
     }
 
-    public static Commandes enregistrer(Commandes commande, List<String> garnitures) {
+    public static Long enregistrer(Commandes commande, List<String> garnitures) {
         Class classe = commande.getClass();
         Field[] champs = classe.getFields();
         int i = 0;
@@ -57,7 +57,19 @@ public class PizzaService {
                 i = i + 1;
             }
         }
-//        commande.etat="Pizza choisie";
+        List<Tailles> listeTaille =Tailles.find(" taille=?",commande.taille).fetch();
+        commande.total= (float) listeTaille.get(0).prix;
+        commande.etat="Pizza choisie";
+        commande.save();
+        return commande.id;
+    }
+
+    public static Commandes completer(Commandes commande,String nom, String telephone, String adresse, String codePostal) {
+        commande.nom=nom;
+        commande.telephone=telephone;
+        commande.adresse=adresse;
+        commande.codePostal=codePostal;
+        commande.etat="Formulaire client complété";
         commande.save();
         return commande;
     }

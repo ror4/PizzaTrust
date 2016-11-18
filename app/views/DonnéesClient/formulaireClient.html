@@ -8,11 +8,11 @@
         <ul>
             <li>
                 <label>Nom</label>
-                <input id=nom name=commande.nom type=text placeholder="Prénom et nom" required autofocus>
+                <input id=nom name=nom type=text placeholder="Prénom et nom" required autofocus>
             </li>
             <li>
                 <label>Téléphone</label>
-                <input id=telephone name=commande.telephone type=tel placeholder="par ex&nbsp;: 0600000000" required>
+                <input id=telephone name=telephone type=tel placeholder="par ex&nbsp;: 0600000000" required>
             </li>
         </ul>
     </fieldset>
@@ -22,14 +22,15 @@
         <ul>
             <li>
                 <label>Adresse</label>
-                <input id=adresse name=commande.adresse rows=1 placeholder="11, rue Alfred Kastler" required>
+                <input id=adresse name=adresse rows=1 placeholder="11, rue Alfred Kastler" required>
             </li>
             <li>
                 <label>Code postal</label>
-                <input id=codepostal name=commande.codePostal type=text placeholder="14280" required>
+                <input id=codepostal name=codePostal type=text placeholder="14280" required>
             </li>
         </ul>
     </fieldset>
+    <input type="hidden" name="idCommande" value=${idCommande}>
     <fieldset>
         <button type=submit>Valider !</button>
     </fieldset>
