@@ -1,10 +1,21 @@
 #{extends 'main.html' /}
 #{set title:'Récapitulatif' /}
 
-Recapitulatif de votre commande<br/><br/>
-
-Prénom et nom : ${nom}<br/>
-Téléphone : ${telephone}<br/>
-Adresse : ${adresse}<br/>
-Code postal : ${codepostal}<br/><br/>
-
+<div class="recapitulatif">
+    <h1>Recapitulatif de votre commande</h1>
+    <p>
+        Nom : <b>Toto</b><br/><br/>
+        Adresse :<br/>
+        <b>1 rue de la formation<br/>
+        14000 Caen</b><br/><br/>
+        Téléphone : <b>0233343536</b><br/><br/>
+        Pizza de taille <b>large</b> à pâte <b>fine</b><br/><br/>
+        Garnitures :<br/>
+        <b>jambon</b><br/>
+        <b>bacon</b><br/>
+        <b>champignon</b><br/>
+        <b>chèvre</b><br/>
+        <b>merguez</b><br/><br/>
+        Prix : <b>7</b> €
+    </p>
+</div>

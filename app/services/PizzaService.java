@@ -58,7 +58,7 @@ public class PizzaService {
             }
         }
 //        commande.etat="Pizza choisie";
-        commande.save();
+//        commande.save();
         return commande;
     }
 }
