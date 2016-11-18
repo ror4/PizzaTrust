@@ -1,11 +1,9 @@
 package services;
 
-import models.Garnitures;
-import models.Pates;
-import models.Sauces;
-import models.Tailles;
+import models.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by Formation on 17/11/2016.
@@ -56,5 +54,10 @@ public class BackofficeServices extends CommonServices {
     public static void addGarniture(Garnitures garniture){
         garniture.estDisponible = true;
         garniture.save();
+    }
+
+    public static List<Commandes> getListCommandes() {
+        List<Commandes> commandes = Commandes.find("ORDER BY dateCommande").fetch();
+        return commandes;
     }
 }

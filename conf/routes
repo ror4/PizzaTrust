@@ -16,6 +16,7 @@ POST /backoffice/addPate                        Backoffice.AdminController.addPa
 POST /backoffice/addSauce                       Backoffice.AdminController.addSauce
 POST /backoffice/addTaille                      Backoffice.AdminController.addTaille
 POST /backoffice/addGarniture                   Backoffice.AdminController.addGarniture
+GET /backoffice/historiqueCommande              Backoffice.AdminController.gestionCommandes
 
 
 #Frontoffice

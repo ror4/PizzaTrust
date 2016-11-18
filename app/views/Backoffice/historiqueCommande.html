@@ -1,0 +1,45 @@
+#{extends 'mainBackOffice.html' /}
+#{set title:'Historique commande' /}
+
+<a href="/backoffice">Retour vers accueil backoffice</a>
+
+<br/>
+Historique de commande :<br/>
+
+<table>
+    <tr>
+        <td colspan="6">Infos Client</td>
+        <td colspan="7">Infos Pizza</td>
+    </tr>
+    <tr>
+        <td>Nom</td>
+        <td>Adresse</td>
+        <td>Telephone</td>
+        <td>Date de commande</td>
+        <td>Total</td>
+        <td>Pate</td>
+        <td>Sauce</td>
+        <td>Garniture 1</td>
+        <td>Garniture 2</td>
+        <td>Garniture 3</td>
+        <td>Garniture 4</td>
+        <td>Garniture 5</td>
+    </tr>
+    #{list items:commandes, as:'commande'}
+    <tr>
+        <td>${commande.nom}</td>
+        <td>${commande.adresse} -- ${commande.codePostal} ${commande.ville} </td>
+        <td>${commande.telephone}</td>
+        <td>${commande.dateCommande}</td>
+        <td>${commande.total}</td>
+        <td>${commande.pate}</td>
+        <td>${commande.sauce}</td>
+        <td>${commande.garniture1}</td>
+        <td>${commande.garniture2}</td>
+        <td>${commande.garniture3}</td>
+        <td>${commande.garniture4}</td>
+        <td>${commande.garniture5}</td>
+    </tr>
+    #{/list}
+</table>
+

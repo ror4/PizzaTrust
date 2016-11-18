@@ -1,9 +1,6 @@
 package controllers.Backoffice;
 
-import models.Garnitures;
-import models.Pates;
-import models.Sauces;
-import models.Tailles;
+import models.*;
 import play.mvc.Controller;
 import services.BackofficeServices;
 
@@ -56,6 +53,11 @@ public class AdminController extends Controller {
     public static void gestionGarnitures(){
         List<Garnitures> garnitures = BackofficeServices.getListGarnitures();
         renderTemplate("/Backoffice/gestionGarnitures.html",garnitures);
+    }
+
+    public static void gestionCommandes(){
+        List<Commandes> commandes = BackofficeServices.getListCommandes();
+        renderTemplate("/Backoffice/historiqueCommande.html",commandes);
     }
 
     public static void deleteSauce(long id){
