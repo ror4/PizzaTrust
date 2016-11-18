@@ -64,10 +64,11 @@ public class PizzaService {
         return commande.id;
     }
 
-    public static Commandes completer(Commandes commande,String nom, String telephone, String adresse, String codePostal) {
+    public static Commandes completer(Commandes commande,String nom, String telephone, String adresse, String codePostal, String ville) {
         commande.nom=nom;
         commande.telephone=telephone;
         commande.adresse=adresse;
+        commande.ville=ville;
         commande.codePostal=codePostal;
         commande.etat="Formulaire client complété";
         commande.save();

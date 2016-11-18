@@ -16,8 +16,8 @@ public class ClientController extends Controller {
         renderTemplate("/DonnéesClient/formulaireClient.html",idCommande);
     }
 
-    public static void valider(Long idCommande,String nom, String telephone, String adresse, String codePostal){
-        Commandes commande = PizzaService.completer((Commandes)Commandes.findById(idCommande),nom,telephone,adresse,codePostal);
+    public static void valider(Long idCommande,String nom, String telephone, String adresse, String codePostal, String ville){
+        Commandes commande = PizzaService.completer((Commandes)Commandes.findById(idCommande),nom,telephone,adresse,codePostal,ville);
         renderTemplate("/Recapitulatif/recapitulatif.html",commande);
     }
 
