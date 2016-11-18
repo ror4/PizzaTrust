@@ -5,3 +5,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+#logo {
+  float: right;
+  margin-top: 2px;
+}
